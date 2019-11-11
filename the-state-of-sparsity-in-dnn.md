@@ -1,6 +1,7 @@
 # The State of Sparsity in Deep Neural Networks
 
 Статья: https://arxiv.org/abs/1902.09574
+
 Код: https://github.com/google-research/google-research/tree/master/state_of_sparsity
 
 ## Цель:
@@ -9,12 +10,21 @@
 
 ## Методы:
 
-1. Random Pruning
-2. Magnitude Pruning
-3. Variational Dropout (
-4. l_0 regularization
-5. Lottery tickets
-6. Scratch
+### Random Pruning:
+
+Каждые N шагов тренировки зануляется часть весов.
+
+### Magnitude Pruning:
+
+Используется вариант с пропогейтом градиентов через удалённые веса, для того, чтобы была возможность их вернуть. Каждые N шагов прунится какая-то часть наименьших весов. https://arxiv.org/abs/1710.01878
+
+### Variational Dropaut
+
+### l_{0} regularization
+
+### Lottery tickets
+
+### Scratch
 
 ## Эксперименты:
 
@@ -23,4 +33,6 @@
 
 ## Результаты:
 
-
+1. Магнитудный прунинг почти всегда был лучше, чем более сложные методы разреживания матриц. Также с помощью простых эвристик довольно сильно улучшаются его результаты.
+2. l_{0} не справилась с разреживанием ResNet-50 на ImageNet сете без значительного ухудшения качества.
+3. Методы поиска архитектуры с помощью разреживания матриц справились с задачами значительно хуже магнитудного прунинга.
