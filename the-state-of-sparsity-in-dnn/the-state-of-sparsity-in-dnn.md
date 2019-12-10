@@ -6,7 +6,7 @@ Code: https://github.com/google-research/google-research/tree/master/state_of_sp
 
 ## Problem:
 
-Compare different techniques for inducing sparsity in deep neural net- works
+Compare different techniques for inducing sparsity in deep neural networks
 
 ## Methods:
 
