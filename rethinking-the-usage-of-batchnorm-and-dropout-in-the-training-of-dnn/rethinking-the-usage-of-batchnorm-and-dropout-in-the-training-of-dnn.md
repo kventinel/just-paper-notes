@@ -11,6 +11,7 @@ Decorrelation features in neural networks
 Simple layer from batchnorm + dropout used for decorelate features.
 In paper proved theorem, that claims, that Shannon entropy decreased linearly by dropout coef and mutual information decreased quadratically by p.
 Also showed, that correlation coef decreased linearly by p, such as expected activation.
+Also proved, that BatchNorm should be placed after activation function.
 
 ## Residual connection options:
 
